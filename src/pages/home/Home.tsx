@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import styles from './Home.module.css';
+import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
@@ -10,9 +11,15 @@ export function Home() {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
-              <Nav.Link href='#characters'>Characters</Nav.Link>
-              <Nav.Link href='#episodes'>Episodes</Nav.Link>
-              <Nav.Link href='#locations'>Locations</Nav.Link>
+              <Link to='/characters' className='nav-link'>
+                Characters
+              </Link>
+              <Link to='/episodes' className='nav-link'>
+                Episodes
+              </Link>
+              <Link to='/locations' className='nav-link'>
+                Locations
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
