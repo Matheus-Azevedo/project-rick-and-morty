@@ -10,6 +10,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/characters' element={<div>Not Found</div>}></Route>
+        <Route path='/episodes' element={<div>Not Found</div>}></Route>
+        <Route path='/locations' element={<div>Not Found</div>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
