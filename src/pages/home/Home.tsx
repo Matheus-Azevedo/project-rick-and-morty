@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import styles from './Home.module.css';
 
 export function Home() {
   return (
@@ -16,7 +17,7 @@ export function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className='background-image' />
+      <div className={styles.background_image} />
     </>
   );
 }
