@@ -1,13 +1,11 @@
-import { Link } from 'react-router-dom';
 import { NavWrapper } from '../../shared';
+import { LinkBackToHome } from '../../components';
 
 export function Episodes() {
   return (
     <>
       <NavWrapper>
-        <Link to='/' className='nav-link'>
-          Back to Home
-        </Link>
+        <LinkBackToHome />
       </NavWrapper>
       <h1>Episodes</h1>
     </>
