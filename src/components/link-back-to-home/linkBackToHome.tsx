@@ -1,12 +1,12 @@
 import { ArrowLeft } from 'phosphor-react';
-import { Link } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 export function LinkBackToHome() {
   return (
     <div>
-      <Link to='/' className='nav-link'>
+      <Nav.Link href='/'>
         <ArrowLeft size={20} />
-      </Link>
+      </Nav.Link>
     </div>
   );
 }

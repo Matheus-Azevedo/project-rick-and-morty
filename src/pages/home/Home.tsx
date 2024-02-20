@@ -1,20 +1,14 @@
 import styles from './Home.module.css';
-import { Link } from 'react-router-dom';
 import { NavWrapper } from '../../shared';
+import { Nav } from 'react-bootstrap';
 
 export function Home() {
   return (
     <>
       <NavWrapper>
-        <Link to='/characters' className='nav-link'>
-          Characters
-        </Link>
-        <Link to='/episodes' className='nav-link'>
-          Episodes
-        </Link>
-        <Link to='/locations' className='nav-link'>
-          Locations
-        </Link>
+        <Nav.Link href='/characters'>Characters</Nav.Link>
+        <Nav.Link href='/episodes'>Episodes</Nav.Link>
+        <Nav.Link href='/locations'>Locations</Nav.Link>
       </NavWrapper>
       <div className={styles.background_image} />
     </>
