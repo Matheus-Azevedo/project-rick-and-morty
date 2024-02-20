@@ -1,5 +1,6 @@
-import { NavWrapper } from '../../shared';
+import { CardWrapper, NavWrapper } from '../../shared';
 import { LinkBackToHome } from '../../components';
+import { Card, Button } from 'react-bootstrap';
 
 export function Episodes() {
   return (
@@ -7,7 +8,11 @@ export function Episodes() {
       <NavWrapper>
         <LinkBackToHome />
       </NavWrapper>
-      <h1>Episodes</h1>
+      <CardWrapper>
+        <Card.Title>Card Name</Card.Title>
+        <Card.Text>Data de estreia:</Card.Text>
+        <Button variant='primary'>Go somewhere</Button>
+      </CardWrapper>
     </>
   );
 }
