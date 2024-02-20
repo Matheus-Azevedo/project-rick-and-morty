@@ -3,7 +3,7 @@ import { LinkBackToHome } from '../../components';
 import { Card, Button } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { CharacterResponse, getCharacters } from '../../services';
-import styles from './Characters.module.css';
+import styles from '../Pages.module.css';
 
 export function Characters() {
   const [characters, setCharacters] = useState<CharacterResponse[]>([]);
