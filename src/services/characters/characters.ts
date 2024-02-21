@@ -21,7 +21,7 @@ export interface CharacterResponse {
   created: string;
 }
 
-export const getCharacters = async (): Promise<CharacterResponse[]> => {
-  const { data } = await axios.get('https://rickandmortyapi.com/api/character');
+export const getCharacters = async (page: number): Promise<CharacterResponse[]> => {
+  const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
   return data.results;
 };

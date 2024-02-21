@@ -7,14 +7,32 @@ import styles from '../Pages.module.css';
 
 export function Episodes() {
   const [episodes, setEpisodes] = useState<EpisodeResponse[]>([]);
+  const [currentNumber, setCurrentNumber] = useState(1);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getEpisodes();
+      const data = await getEpisodes(currentNumber);
       setEpisodes(data);
     }
     fetchData();
-  }, []);
+  }, [currentNumber]);
+
+  const handleNext = () => {
+    if (currentNumber < 3) {
+      setCurrentNumber(currentNumber + 1);
+      console.log(currentNumber + 1);
+      window.scrollTo(0, 0);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentNumber > 1) {
+      setCurrentNumber(currentNumber - 1);
+      console.log(currentNumber - 1);
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <>
       <NavWrapper>
@@ -29,6 +47,10 @@ export function Episodes() {
             <Button variant='primary'>Go somewhere</Button>
           </CardWrapper>
         ))}
+      </div>
+      <div className={styles.container_buttons_prev_next}>
+        <Button onClick={handlePrevious}>Previous</Button>
+        <Button onClick={handleNext}>Next</Button>
       </div>
     </>
   );

@@ -10,7 +10,7 @@ export interface EpisodeResponse {
   created: string;
 }
 
-export const getEpisodes = async (): Promise<EpisodeResponse[]> => {
-  const { data } = await axios.get('https://rickandmortyapi.com/api/episode');
+export const getEpisodes = async (page: number): Promise<EpisodeResponse[]> => {
+  const { data } = await axios.get(`https://rickandmortyapi.com/api/episode?page=${page}`);
   return data.results;
 };

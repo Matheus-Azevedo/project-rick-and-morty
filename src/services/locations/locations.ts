@@ -10,7 +10,7 @@ export interface LocationResponse {
   created: string;
 }
 
-export const getLocations = async (): Promise<LocationResponse[]> => {
-  const { data } = await axios.get('https://rickandmortyapi.com/api/location');
+export const getLocations = async (page: number): Promise<LocationResponse[]> => {
+  const { data } = await axios.get(`https://rickandmortyapi.com/api/location?page=${page}`);
   return data.results;
 };
